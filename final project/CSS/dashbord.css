@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color:#A2453D ;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+}
+
+header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#searchTitleInput, #searchDateInput {
+    width: 48%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.card {
+    background-color: #cecdc9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.card p {
+    font-size: larger ;
+}
+.table {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto; /* Ensure columns shrink to fit content */
+}
+table thead{
+    background-color: #cdcdcd;
+    color: #000000;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+button {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.edit-btn {
+    background-color: #007bff; /* Blue */
+}
+
+.edit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+table th:nth-child(1), /* Title column */
+table td:nth-child(1) {
+    width: 1%; /* Minimal width */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+table th:nth-child(3), /* Location column */
+table td:nth-child(3) {
+    width: 1%; /* Minimal width */
+    white-space: nowrap; /* Prevent wrapping */
+}
+.action-buttons {
+    display: flex; /* Use flexbox to keep buttons in the same line */
+    gap: 10px; /* Add some space between the buttons */
+}
+
+.action-buttons button {
+    margin: 0; /* Ensure no extra margin is added around buttons */
+    padding: 8px 12px; /* Optional: Adjust padding for uniform size */
+}
+.seperate{
+    display: grid;
+    grid-template-columns: 7fr 1fr ;
+}
+@media (max-width: 768px) {
+    .cards {
+    flex-direction: column;
+    }
+
+    .card {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+
+    .sidebar {
+    width: 200px;
+    }
+
+    .main-content {
+    margin-left: 200px;
+    }
+}
+
+/* Modal styles */
+
+/* Updated Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 50%; /* Change width to 50% */
+  max-width: 500px; /* Keep a max-width for larger screens */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: auto; /* Center the modal */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+#modalTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#eventForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#eventForm input,
+#eventForm select {
+  width: 100%;
+  padding: 1px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+#eventForm input[type="file"] {
+  border: none;
+}
+
+#imagePreview {
+  display: none; /* Hide initially */
+  margin: 10px 0; /* Space above and below */
+  border-radius: 5px;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+  border: 1px solid #ddd; /* Optional */
+}
+
+#eventForm button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px; /* Ensure there's space above */
+  background-color: #28a745; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#eventForm button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Adjust for mobile */
+  }
+}

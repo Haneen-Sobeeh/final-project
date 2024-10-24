@@ -1,0 +1,171 @@
+<!-- /html/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="../CSS/nav-footer.css">
+  <link rel="stylesheet" href="../CSS/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <div data-include="../html/navbar.html"></div>
+
+  <!-- <div data-include="../HTML/navbar.html"></div> -->
+<section class="home">
+ <!-- Main Content -->
+ <div class="homeImage">
+  <img src="../assets/home-page.jpg" alt="">
+ <h1>WELCOME TO HOME CHEF</h1>
+  <p>
+    where delicious meals are made easy. Find inspiration, simple recipes, and tips to turn every dish into something special."
+  </p>
+<button class="imageButton">Order Now</button>
+</div>
+</section>
+
+<p class="line"> Our Value</p>
+
+<section class="image-text-section">
+  <div class="content-container">
+    <!-- Text on the left -->
+    <div class="text">
+      <h2>Eat Like a Family</h2>
+      <p>"HomeChef makes dorm cooking simple with quick recipes and minimal ingredients. Perfect for students looking to enjoy tasty, homemade meals on a budget."</p>
+    </div>
+    
+    <!-- Image on the right -->
+    <!-- Image on the right<div class="image">
+      <img src="../assets/pngegg.png" alt="Sample Image">
+    </div>
+  </div>
+ -->
+  <!-- Circular Elements -->
+  <div class="circles-container">
+    <div class="circle">
+      <div class="icon">
+        <img src="../assets/choose.png" alt="Icon 2">
+       
+      </div>
+      <p>You choose</p>
+    </div>
+    <div class="circle">
+      <div class="icon">
+        <img src="../assets/make1.png" alt="Icon 2">
+      </div>
+      <p>We make</p>
+    </div>
+    <div class="circle">
+      <div class="icon">
+        <img src="../assets/deliver.png" alt="Icon 3">
+      </div>
+      <p>We deliver</p>
+    </div>
+    <div class="circle">
+      <div class="icon">
+        <img src="../assets/food.png" alt="Icon 4">
+      </div>
+      <p>You eat</p>
+    </div>
+  </div>
+</section>
+
+<p class="line">  Our Delicious Meals</p>
+
+<!-- Card Slider Section -->
+<section class="food-card-slider">
+  
+
+  <!-- Navigation Buttons -->
+  <button class="slider-btn left" id="slideLeft"><i class="fas fa-chevron-left"></i></button>
+
+  <div class="slider-container">
+    <!-- Food Card -->
+    <div class="card">
+      <img src="../assets/mansaf.jpg" alt="Delicious Food 1">
+      <h3>Mansaf</h3>
+      <p> Rich lamb, yogurt, rice perfection.</p>
+    </div>
+    
+    <div class="card">
+      <img src="../assets/babaganhe.webp" alt="Delicious Food 2">
+      <h3>Baba Ganoush</h3>
+      <p>Smoky Baba Ganoush with tahini.</p>
+    </div>
+    
+    <div class="card">
+      <img src="../assets/kapsa.webp" alt="Delicious Food 3">
+      <h3>Chicken Kabsa</h3>
+      <p>
+        Spiced Chicken Kabsa with fragrant rice.</p>
+    </div>
+
+    <div class="card">
+      <img src="../assets/fatcsh.webp" alt="Delicious Food 3">
+      <h3>Fattoush Salad </h3>
+      <p>Fresh Fattoush with crispy veggies.</p>
+    </div>
+
+    <div class="card">
+      <img src="../assets/bamya.webp" alt="Delicious Food 3">
+      <h3>Bamya</h3>
+      <p>Savory Bamya stew with tender okra.</p>
+    </div>
+
+    
+
+    <!-- Add more cards as needed -->
+  </div>
+
+  <!-- Right Navigation Button -->
+  <button class="slider-btn right" id="slideRight"><i class="fas fa-chevron-right"></i></button>
+</section>
+
+
+
+
+<!-- Fixed Feedback Button -->
+<button id="feedbackButton" class="feedback-btn">Feedback</button>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Your Feedback</h2>
+    <textarea id="feedbackText" placeholder="Write your feedback here..."></textarea>
+    <button id="submitFeedback">Submit</button>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <div data-include="../html/footer.html"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="../JS/nav-footer.js"></script>
+  <script src="../JS/home.js"></script>
+ 
+</body>
+</html>

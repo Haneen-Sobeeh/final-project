@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Info</title>
+    <link rel="stylesheet" href="../CSS/nav-footer.css">
+    <link rel="stylesheet" href="../CSS/meal-info.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div data-include="../html/navbar.html"></div>
+
+    <section class="meal-info-container">
+        <div class="image-container">
+            <img src="../assets/mansaf.jpg" alt="Mansaf">
+        </div>
+
+        <div class="details-container">
+            <h2>Mansaf</h2>
+            <p>Rich lamb, yogurt, rice perfection.</p>
+        
+            <div class="input-group">
+                <div class="input-item">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+        
+                <div class="input-item">
+                    <label for="order-date">Order Date:</label>
+                    <input type="date" id="order-date" min="">
+                </div>
+        
+                <div class="input-item">
+                    <label for="order-time">Order Time:</label>
+                    <input type="time" id="order-time">
+                </div>
+            </div>
+        
+            <label for="comments">Comments:</label>
+            <textarea id="comments" rows="4" placeholder="Any comments or special instructions"></textarea>
+        
+            <label for="location">Delivery Location:</label>
+            <select id="location">
+                <option value="irbid">Irbid</option>
+                <option value="outside">Outside Irbid</option>
+            </select>
+
+            <div class="input-item">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method">
+                    <option value="cash">Cash</option>
+                    <option value="card">Card</option>
+                </select>
+            </div>
+        
+            <button id="submit-btn">Submit Order</button>
+        </div>
+        
+
+    </section>
+
+
+     <!-- Modal for Card Information -->
+     <div id="card-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter Card Information</h2>
+            <div class="input-item">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="input-item">
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="month" id="expiry-date" required>
+            </div>
+            <div class="input-item">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="123" required>
+            </div>
+            <button id="submit-card-info">Submit Card Info</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div data-include="../html/footer.html"></div>
+
+    <script src="../JS/meal-info.js"></script>
+    <script src="../JS/nav-footer.js"></script>
+</body>
+</html>

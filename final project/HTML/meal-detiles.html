@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/nav-footer.css">
+    <link rel="stylesheet" href="../CSS/meal-detiles.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <div data-include="../html/navbar.html"></div>
+
+    <div class="container">
+        <!-- Meal Section -->
+        <div class="meal-section">
+            <div class="meal-details">
+                <img src="../assets/mansaf.jpg" alt="Meal Image" class="meal-image">
+                <div class="meal-info">
+                    <h1 class="meal-title">Delicious Pasta</h1>
+                    <p class="meal-description">This pasta is made with a rich tomato sauce, fresh herbs, and your choice of toppings. A classic Italian dish loved by many! helosgkospv dsjghsriugh rigjsoip rekgjwrpog wroigjwopigj reogijeroij rgohijer9 iejwg9i-wrgc rwoigjwriug dfigherughb fs9iuwhjer9uighdsknsdpnbspfnsodnrsnufnbusfnhr9gnru9wegnrwngw9urgnwr9ihgwr9hg regi8jr98yjh3reg9erije9uigh eri9jgwr9hjre-</p>
+                    <p class="meal-price">Price: $12.99</p>
+                    <div class="buttons">
+                        <button id="reviewButton" class="btn">Review</button>
+                        <button class="btn order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <h2>Reviews</h2>
+            <div id="reviewList">
+                <!-- Reviews will be added dynamically -->
+            </div>
+            <button id="seeMoreButton" class="btn see-more-btn">See More</button>
+        </div>
+
+        <!-- Pop-up for Review -->
+        <div id="reviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Write a Review</h2>
+                <input type="text" id="reviewerName" placeholder="Your Name" required>
+                <textarea id="reviewText" placeholder="Your Review" required></textarea>
+                <button id="submitReview" class="btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div data-include="../html/footer.html"></div>
+
+    <script src="../JS/meal-detiles.js"></script>
+    <script src="../JS/nav-footer.js"></script>
+
+
+
+</body>
+</html>
